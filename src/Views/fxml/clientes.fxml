@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="1274.0" styleClass="app" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerProveedores">
+   <top>
+      <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" styleClass="toolbar" BorderPane.alignment="CENTER">
+        <items>
+            <Button mnemonicParsing="false" styleClass="btntoolbar" text="X" />
+            <Button mnemonicParsing="false" styleClass="btntoolbar" text="" />
+            <Button mnemonicParsing="false" styleClass="btntoolbar" text="" />
+            <Button mnemonicParsing="false" styleClass="btntoolbar" text="" />
+            <Button ellipsisString="" graphicTextGap="8.0" styleClass="btntoolbar" text="" />
+            <Label alignment="CENTER" prefHeight="28.0" prefWidth="994.0" styleClass="titletoolber" text="Clientes" />
+            <Button ellipsisString="" mnemonicParsing="false" onAction="#btnMenu" styleClass="btntoolbar" text="" />
+        </items>
+      </ToolBar>
+   </top>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="app" BorderPane.alignment="CENTER">
+         <children>
+            <TableView cacheHint="SCALE" layoutX="7.0" layoutY="240.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="294.0" prefWidth="1251.0" styleClass="toolbar">
+              <columns>
+                <TableColumn editable="false" prefWidth="78.0" text="Id" />
+                  <TableColumn editable="false" prefWidth="172.0" text="Razón Social" />
+                  <TableColumn editable="false" prefWidth="106.0" text="Nombres" />
+                  <TableColumn editable="false" prefWidth="124.0" text="Apellidos" />
+                  <TableColumn editable="false" prefWidth="124.0" text="Teléfono" />
+                  <TableColumn editable="false" prefWidth="124.0" text="Correo" />
+                <TableColumn editable="false" prefWidth="190.0" text="Dirección" />
+                  <TableColumn editable="false" prefWidth="324.0" text="Ciudad" />
+                  <TableColumn editable="false" prefWidth="324.0" text="C.P" />
+                  <TableColumn editable="false" prefWidth="324.0" text="Estatus" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <TextField layoutX="310.0" layoutY="41.0" prefHeight="25.0" prefWidth="228.0" />
+            <TextArea layoutX="310.0" layoutY="133.0" prefHeight="92.0" prefWidth="338.0" />
+            <Label layoutX="310.0" layoutY="112.0" prefHeight="15.0" prefWidth="109.0" styleClass="lblor" text="Dirección:" />
+            <Label layoutX="310.0" layoutY="17.0" prefHeight="15.0" prefWidth="109.0" styleClass="lblor" text="Nombres:" />
+            <Label layoutX="668.0" layoutY="112.0" prefHeight="15.0" prefWidth="109.0" styleClass="lblor" text="Ciudad:" />
+            <TextField layoutX="668.0" layoutY="136.0" prefHeight="25.0" prefWidth="197.0" />
+            <TextField layoutX="89.0" layoutY="41.0" prefHeight="25.0" prefWidth="197.0" />
+            <Label layoutX="89.0" layoutY="17.0" prefHeight="15.0" prefWidth="109.0" styleClass="lblor" text="Razón Social" />
+            <Label layoutX="568.0" layoutY="17.0" prefHeight="15.0" prefWidth="109.0" styleClass="lblor" text="Apellidos:" />
+            <TextField layoutX="568.0" layoutY="41.0" prefHeight="25.0" prefWidth="285.0" />
+            <TextField layoutX="886.0" layoutY="41.0" prefHeight="25.0" prefWidth="197.0" />
+            <Label layoutX="886.0" layoutY="17.0" prefHeight="15.0" prefWidth="109.0" styleClass="lblor" text="Teléfono:" />
+            <TextField layoutX="89.0" layoutY="136.0" prefHeight="25.0" prefWidth="197.0" />
+            <Label layoutX="89.0" layoutY="112.0" prefHeight="15.0" prefWidth="109.0" styleClass="lblor" text="Correo:" />
+            <TextField layoutX="668.0" layoutY="203.0" prefHeight="25.0" prefWidth="197.0" />
+            <Label layoutX="668.0" layoutY="179.0" prefHeight="15.0" prefWidth="109.0" styleClass="lblor" text="C.P:" />
+            <ToggleButton disable="true" layoutX="899.0" layoutY="161.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="172.0" selected="true" text="Activo">
+               <tooltip>
+                  <Tooltip anchorLocation="CONTENT_BOTTOM_LEFT" autoHide="true" styleClass="lblor" text="Clip para reactivar" />
+               </tooltip>
+               <styleClass>
+                  <String fx:value="toolbar" />
+                  <String fx:value="lblor" />
+               </styleClass>
+            </ToggleButton>
+         </children>
+      </Pane>
+   </center>
+   <bottom>
+      <Pane prefHeight="42.0" prefWidth="843.0" styleClass="app" BorderPane.alignment="CENTER">
+         <children>
+            <CheckBox layoutX="29.0" layoutY="12.0" mnemonicParsing="false" text="Ver Desactivos" />
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>
