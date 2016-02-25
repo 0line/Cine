@@ -5,11 +5,11 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="394.0" prefWidth="628.0" styleClass="app" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerMenu">
+<BorderPane cache="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="1274.0" styleClass="app" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerMenu">
    <center>
-      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="app" BorderPane.alignment="CENTER">
+      <Pane focusTraversable="true" prefHeight="200.0" prefWidth="200.0" styleClass="app" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="232.0" fitWidth="382.0" layoutX="120.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="194.0" fitWidth="521.0" layoutX="202.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/logo.png" />
                </image>
@@ -18,12 +18,26 @@
       </Pane>
    </center>
    <top>
-      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <ToolBar prefHeight="62.0" prefWidth="987.0" BorderPane.alignment="CENTER">
          <items>
-            <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnSucursales" prefHeight="50.0" prefWidth="200.0" styleClass="btnapp" text="     Sucursales" />
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" styleClass="btnapp" text="     Provedores" onAction="#btnProveedores"/>
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" styleClass="btnapp" text="     Clientes"  onAction="#btnClientes"/>
+            <Button contentDisplay="CENTER" disable="true" maxWidth="297.0" mnemonicParsing="false" onAction="#btnSucursales" prefHeight="50.0" prefWidth="297.0" styleClass="btnapp" text="     Sucursales" />
+            <Button disable="true" mnemonicParsing="false" onAction="#btnProveedores" prefHeight="50.0" prefWidth="200.0" styleClass="btnapp" text="     Provedores" />
+            <Button disable="true" mnemonicParsing="false" onAction="#btnClientes" prefHeight="50.0" prefWidth="200.0" styleClass="btnapp" text="     Clientes" />
+            <Button contentDisplay="CENTER" graphicTextGap="5.0" mnemonicParsing="false" onAction="#btnLogin" prefHeight="50.0" prefWidth="200.0" styleClass="btnapp" text="     Login" />
+            <Button contentDisplay="CENTER" graphicTextGap="5.0" mnemonicParsing="false" onAction="#btnSalir" prefHeight="50.0" prefWidth="200.0" styleClass="btnapp" text="     Salir" />
          </items>
       </ToolBar>
    </top>
+   <right>
+      <Pane fx:id="login" prefHeight="557.0" prefWidth="350.0" styleClass="app" visible="false" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="txtuser" layoutX="77.0" layoutY="101.0" prefHeight="40.0" prefWidth="213.0" />
+            <PasswordField fx:id="txtpassword" layoutX="77.0" layoutY="199.0" prefHeight="41.0" prefWidth="213.0" />
+            <Label layoutX="77.0" layoutY="74.0" styleClass="lblor" text="Usuario:" />
+            <Label layoutX="77.0" layoutY="175.0" styleClass="lblor" text="Contraseña:" />
+            <Button fx:id="btnLogin" layoutX="206.0" layoutY="279.0" mnemonicParsing="false" styleClass="btnapp" text="Entrar" />
+            <Label fx:id="lblMensaje" alignment="CENTER" cacheHint="SCALE_AND_ROTATE" contentDisplay="CENTER" layoutX="4.0" prefHeight="57.0" prefWidth="341.0" styleClass="lblor" text="Mensaje" visible="false" />
+         </children>
+      </Pane>
+   </right>
 </BorderPane>

@@ -97,7 +97,7 @@ public class ScreenController extends BorderPane {
 							
 							public void handle(ActionEvent event)
 							{
-								getChildren().remove(0);							
+								getChildren().remove(0);
 								getChildren().add(0,Screens.get(windowsoption));
 								Timeline input= new Timeline(
 										new KeyFrame(Duration.ZERO, new KeyValue(opacity, 0.0)),

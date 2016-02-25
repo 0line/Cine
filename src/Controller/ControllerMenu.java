@@ -5,12 +5,13 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class ControllerMenu implements Initializable, IScreenController{
  ScreenController myController=ScreenController.getInstancia();
- 
+ @FXML Pane login;
  @Override
  public void initialize(URL location, ResourceBundle resources) {
  	// TODO Auto-generated method stub
@@ -30,5 +31,11 @@ public class ControllerMenu implements Initializable, IScreenController{
  }
  @FXML public void btnClientes(){
 	 myController.showScreen(Main.clientes);
+ }
+ @FXML public void btnLogin(){
+	 login.setVisible(true);
+ }
+ @FXML public void btnSalir(){
+	 System.exit(0);
  }
 }

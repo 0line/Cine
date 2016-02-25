@@ -27,6 +27,7 @@ public class Main extends Application {
 		mainContainer.loadScreen(Main.clientes, Main.urlclientes);
 		mainContainer.showScreen(Main.menu);
 		Group root= new Group();
+		//root.setAutoSizeChildren(true);
 		root.getChildren().addAll(mainContainer);
 		Scene scene = new Scene(root);
 		scene.getStylesheets().add(getClass().getResource("../Views/css/app.css").toExternalForm());

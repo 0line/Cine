@@ -22,7 +22,7 @@
 	-fx-background-color:rgb(255,255,255); 
 	-fx-text-fill: rgb(136,138,133);
 	-fx-font-size: 14pt;
-	-fx-max-width: 200px;
+	-fx-max-width: 180px;
 }
 .btntoolbar{
 	-fx-font-family: "Lato-Black";
