@@ -1,40 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.cell.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="843.0" styleClass="app" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerSucursales">
    <top>
       <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" styleClass="toolbar" BorderPane.alignment="CENTER">
         <items>
-            <Button mnemonicParsing="false" styleClass="btntoolbar" text="X" />
-            <Button mnemonicParsing="false" styleClass="btntoolbar" text="" />
-            <Button mnemonicParsing="false" styleClass="btntoolbar" text="" />
-            <Button mnemonicParsing="false" styleClass="btntoolbar" text="" />
-            <Button ellipsisString="" graphicTextGap="8.0" styleClass="btntoolbar" text="" />
+            <Button fx:id="btnCancel" cancelButton="true" mnemonicParsing="false" onAction="#btnCancel" styleClass="btntoolbar" text="X" />
+            <Button fx:id="btnDelete" disable="true" mnemonicParsing="false" onAction="#btnDelete" styleClass="btntoolbar" text="" />
+            <Button fx:id="btnUpdate" disable="true" mnemonicParsing="false" onAction="#btnUpdate" styleClass="btntoolbar" text="" />
+            <Button fx:id="btnSave" disable="true" mnemonicParsing="false" onAction="#btnSave" styleClass="btntoolbar" text="" />
+            <Button fx:id="btnNew" ellipsisString="" graphicTextGap="8.0" onAction="#btnNew" styleClass="btntoolbar" text="" />
             <Label alignment="CENTER" prefHeight="28.0" prefWidth="555.0" styleClass="titletoolber" text="Sucursales" />
-            <Button ellipsisString="" mnemonicParsing="false" styleClass="btntoolbar" text="" onAction="#btnMenu" />
+            <Button ellipsisString="" mnemonicParsing="false" onAction="#btnMenu" styleClass="btntoolbar" text="" />
         </items>
       </ToolBar>
    </top>
    <center>
       <Pane prefHeight="200.0" prefWidth="200.0" styleClass="app" BorderPane.alignment="CENTER">
          <children>
-            <TableView layoutX="7.0" layoutY="240.0" prefHeight="294.0" prefWidth="824.0">
+            <TableView fx:id="tvsucursales" layoutX="7.0" layoutY="240.0" onMouseClicked="#clickTableView" prefHeight="294.0" prefWidth="824.0">
               <columns>
-                <TableColumn editable="false" prefWidth="104.0" text="Id_Sucursal" />
-                <TableColumn editable="false" prefWidth="257.0" text="Dirección" />
-                  <TableColumn editable="false" prefWidth="125.0" text="Ciudad" />
-                  <TableColumn editable="false" prefWidth="106.0" text="Estado" />
-                  <TableColumn editable="false" prefWidth="124.0" text="Telefono" />
-                  <TableColumn editable="false" prefWidth="124.0" text="Estatus" />
+                <TableColumn editable="false" prefWidth="104.0" text="Id_Sucursal">
+					<cellValueFactory>
+						<PropertyValueFactory property="id_sucursal" />
+					</cellValueFactory>
+                </TableColumn>
+                <TableColumn editable="false" prefWidth="257.0" text="Dirección">
+					<cellValueFactory>
+						<PropertyValueFactory property="direccion" />
+					</cellValueFactory>
+                </TableColumn>
+                  <TableColumn editable="false" prefWidth="125.0" text="Ciudad">
+					<cellValueFactory>
+						<PropertyValueFactory property="ciudad" />
+					</cellValueFactory>
+                </TableColumn>
+                  <TableColumn editable="false" prefWidth="106.0" text="Estado">
+					<cellValueFactory>
+						<PropertyValueFactory property="estado" />
+					</cellValueFactory>
+                </TableColumn>
+                  <TableColumn editable="false" prefWidth="124.0" text="Telefono">
+					<cellValueFactory>
+						<PropertyValueFactory property="telefono" />
+					</cellValueFactory>
+                </TableColumn>
+                  <TableColumn editable="false" prefWidth="124.0" text="Estatus">
+					<cellValueFactory>
+						<PropertyValueFactory property="estatus" />
+					</cellValueFactory>
+                </TableColumn>
               </columns>
             </TableView>
-            <TextField layoutX="390.0" layoutY="38.0" prefHeight="25.0" prefWidth="197.0" />
-            <TextArea layoutX="39.0" layoutY="40.0" prefHeight="125.0" prefWidth="304.0" />
-            <ComboBox layoutX="639.0" layoutY="38.0" prefHeight="25.0" prefWidth="184.0" />
+            <TextField fx:id="txtciudad" disable="true" layoutX="390.0" layoutY="38.0" prefHeight="25.0" prefWidth="197.0" />
+            <TextArea fx:id="txtdireccion" disable="true" layoutX="39.0" layoutY="40.0" prefHeight="125.0" prefWidth="304.0" />
+            <ComboBox fx:id="cmbestado" disable="true" layoutX="639.0" layoutY="38.0" prefHeight="25.0" prefWidth="184.0" />
             <Label layoutX="39.0" layoutY="14.0" prefHeight="15.0" prefWidth="109.0" styleClass="lblor" text="Dirección:" />
             <Label layoutX="390.0" layoutY="14.0" prefHeight="15.0" prefWidth="109.0" styleClass="lblor" text="Ciudad:" />
             <Label layoutX="639.0" layoutY="14.0" prefHeight="15.0" prefWidth="109.0" styleClass="lblor" text="Estado:" />
@@ -43,14 +69,16 @@
             <Label layoutX="14.0" layoutY="41.0" styleClass="lblorange" text="" />
             <Label layoutX="373.0" layoutY="41.0" styleClass="lblorange" text="" />
             <Label layoutX="616.0" layoutY="41.0" styleClass="lblorange" text="" />
-            <TextField layoutX="390.0" layoutY="140.0" prefHeight="25.0" prefWidth="197.0" />
+            <TextField fx:id="txttelefono" disable="true" layoutX="390.0" layoutY="140.0" prefHeight="25.0" prefWidth="197.0" />
+            <ToggleButton fx:id="btnEstatus" disable="true" layoutX="639.0" layoutY="134.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="123.0" selected="true" styleClass="btnActivo" text="Activo" visible="false" />
          </children>
       </Pane>
    </center>
    <bottom>
       <Pane prefHeight="42.0" prefWidth="843.0" styleClass="app" BorderPane.alignment="CENTER">
          <children>
-            <CheckBox layoutX="29.0" layoutY="12.0" mnemonicParsing="false" text="Ver Desactivos" />
+            <CheckBox fx:id="ckbinactivos" layoutX="29.0" layoutY="12.0" mnemonicParsing="false" onAction="#seeDisable" text="Ver Desactivos" />
+            <Label fx:id="lblMensaje" alignment="CENTER" layoutX="182.0" layoutY="8.0" prefHeight="17.0" prefWidth="612.0" styleClass="titletoolber" text="Mensaje" />
          </children>
       </Pane>
    </bottom>

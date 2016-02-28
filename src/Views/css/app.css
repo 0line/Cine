@@ -52,3 +52,17 @@
 	-fx-font-size: 12pt;
 	-fx-font-weight: bolder;
 }
+.btnActivo{
+	-fx-font-family: "Lato-Regular";
+	-fx-background-color:rgb(238,238,236); 
+	-fx-text-fill: rgb(255,114,0);
+	-fx-font-size: 14pt;
+	-fx-max-width: 180px;
+}
+.btnInactivo{
+	-fx-font-family: "Lato-Regular";
+	-fx-background-color:rgb(255,114,0); 
+	-fx-text-fill: rgb(238,238,236);
+	-fx-font-size: 14pt;
+	-fx-max-width: 180px;
+}

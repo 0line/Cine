@@ -14,17 +14,18 @@
                   <Image url="@../img/logo.png" />
                </image>
             </ImageView>
+            <Label fx:id="lbluser" alignment="CENTER" disable="true" layoutX="-1.0" layoutY="50.0" prefHeight="28.0" prefWidth="922.0" styleClass="titletoolber" text="Label" visible="false" />
          </children>
       </Pane>
    </center>
    <top>
       <ToolBar prefHeight="62.0" prefWidth="987.0" BorderPane.alignment="CENTER">
          <items>
-            <Button contentDisplay="CENTER" disable="true" maxWidth="297.0" mnemonicParsing="false" onAction="#btnSucursales" prefHeight="50.0" prefWidth="297.0" styleClass="btnapp" text="     Sucursales" />
-            <Button disable="true" mnemonicParsing="false" onAction="#btnProveedores" prefHeight="50.0" prefWidth="200.0" styleClass="btnapp" text="     Provedores" />
-            <Button disable="true" mnemonicParsing="false" onAction="#btnClientes" prefHeight="50.0" prefWidth="200.0" styleClass="btnapp" text="     Clientes" />
-            <Button contentDisplay="CENTER" graphicTextGap="5.0" mnemonicParsing="false" onAction="#btnLogin" prefHeight="50.0" prefWidth="200.0" styleClass="btnapp" text="     Login" />
-            <Button contentDisplay="CENTER" graphicTextGap="5.0" mnemonicParsing="false" onAction="#btnSalir" prefHeight="50.0" prefWidth="200.0" styleClass="btnapp" text="     Salir" />
+            <Button fx:id="btnSucursales" contentDisplay="CENTER" disable="true" maxWidth="297.0" mnemonicParsing="false" onAction="#btnSucursales" prefHeight="50.0" prefWidth="297.0" styleClass="btnapp" text="     Sucursales" />
+            <Button fx:id="btnProveedores" disable="true" mnemonicParsing="false" onAction="#btnProveedores" prefHeight="50.0" prefWidth="200.0" styleClass="btnapp" text="     Provedores" />
+            <Button fx:id="btnClientes" disable="true" mnemonicParsing="false" onAction="#btnClientes" prefHeight="50.0" prefWidth="200.0" styleClass="btnapp" text="     Clientes" />
+            <Button fx:id="btnLogin" contentDisplay="CENTER" graphicTextGap="5.0" mnemonicParsing="false" onAction="#btnLogin" prefHeight="50.0" prefWidth="200.0" styleClass="btnapp" text="     Login" />
+            <Button fx:id="btnExit" contentDisplay="CENTER" graphicTextGap="5.0" mnemonicParsing="false" onAction="#btnSalir" prefHeight="50.0" prefWidth="200.0" styleClass="btnapp" text="     Salir" />
          </items>
       </ToolBar>
    </top>
@@ -35,7 +36,7 @@
             <PasswordField fx:id="txtpassword" layoutX="77.0" layoutY="199.0" prefHeight="41.0" prefWidth="213.0" />
             <Label layoutX="77.0" layoutY="74.0" styleClass="lblor" text="Usuario:" />
             <Label layoutX="77.0" layoutY="175.0" styleClass="lblor" text="Contraseña:" />
-            <Button fx:id="btnLogin" layoutX="206.0" layoutY="279.0" mnemonicParsing="false" styleClass="btnapp" text="Entrar" />
+            <Button fx:id="btnLogin" layoutX="206.0" layoutY="279.0" mnemonicParsing="false" onAction="#btnEntrar" styleClass="btnapp" text="Entrar" />
             <Label fx:id="lblMensaje" alignment="CENTER" cacheHint="SCALE_AND_ROTATE" contentDisplay="CENTER" layoutX="4.0" prefHeight="57.0" prefWidth="341.0" styleClass="lblor" text="Mensaje" visible="false" />
          </children>
       </Pane>

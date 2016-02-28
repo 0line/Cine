@@ -84,7 +84,7 @@ public class ScreenController extends BorderPane {
 		//Aqui activamos la vista de la interfaz
 		public boolean showScreen(final String windowsoption)
 		{
-			System.out.println(Screens.get(windowsoption)+ "===");
+			//System.out.println(Screens.get(windowsoption)+ "===");
 			if(Screens.get(windowsoption)!=null)
 			{
 				final DoubleProperty opacity = opacityProperty();
